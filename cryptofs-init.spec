@@ -5,8 +5,6 @@ Version:	1.4
 Release:	1
 License:	GPL
 Group:		Base
-Group(de):	Gründsätzlich
-Group(pl):	Podstawowe
 Source0:	ftp://ftp.pld.org.pl/software/cryptofs-init/%{name}-%{version}.tar.gz
 Requires:	losetup >= 2.11g-3
 Requires:	mount
