@@ -1,0 +1,3 @@
+- fixed stdin redirection
+- "randompass" implies "new"
+- shutdown properly (create subsys lockfile)
