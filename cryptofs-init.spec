@@ -1,7 +1,7 @@
 Summary:	Encrypted filesystems support for rc-scripts
 Summary(pl):	Wsparcie dla szyfrowanych systemów plików do skryptów startowych
 Name:		cryptofs-init
-Version:	1.0
+Version:	1.2
 Release:	1
 License:	GPL
 Group:		Base
@@ -31,7 +31,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf modules.conf cryptofstab.example
+gzip -9nf modules.conf cryptofstab.example README
 
 %post
 /sbin/chkconfig --add cryptofs
