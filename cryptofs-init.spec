@@ -1,12 +1,14 @@
 Summary:	Encrypted filesystems support for rc-scripts
 Summary(pl):	Wsparcie dla szyfrowanych systemów plików do skryptów startowych
 Name:		cryptofs-init
-Version:	1.2
-Release:	2
+Version:	1.4
+Release:	1
 License:	GPL
 Group:		Base
+Group(de):	Gründsätzlich
+Group(pl):	Podstawowe
 Source0:	ftp://ftp.pld.org.pl/software/cryptofs-init/%{name}-%{version}.tar.gz
-Requires:	losetup
+Requires:	losetup >= 2.11g-3
 Requires:	mount
 Prereq:		rc-scripts
 Prereq:		/sbin/chkconfig
@@ -29,6 +31,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+gzip -9nf modules.conf cryptofstab.example README
+
 %post
 /sbin/chkconfig --add cryptofs
 
@@ -42,6 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc modules.conf cryptofstab.example README
+%doc *.gz
 %verify(not size mtime md5) %config(noreplace) %{_sysconfdir}/cryptofstab
 %attr(754,root,root) /etc/rc.d/init.d/cryptofs*
