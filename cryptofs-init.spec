@@ -34,10 +34,12 @@ rm -rf $RPM_BUILD_ROOT
 gzip -9nf modules.conf cryptofstab.example README
 
 %post
-NAME=cryptofs; %chkconfig_add
+/sbin/chkconfig --add cryptofs
 
-%preun
-NAME=cryptofs; %chkconfig_del
+%postun
+if [ "$1" = "0" ]; then
+	/sbin/chkconfig --del cryptofs
+fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
