@@ -1,0 +1,2 @@
+- fixed fsck for some non-ext2 filesystems (added explicit -t option to fsck)
+- version 1.3
