@@ -2,10 +2,10 @@ Summary:	Encrypted filesystems support for rc-scripts
 Summary(pl):	Wsparcie dla szyfrowanych systemów plików do skryptów startowych
 Name:		cryptofs-init
 Version:	1.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Base
-Source0:	ftp://ftp.pld.org.pl/software/cryptofs-init/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.pld-linux.org/software/cryptofs-init/%{name}-%{version}.tar.gz
 # Source0-md5:	650fa5aeb21e8fa62aa7f7b1d76c7a26
 PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig
