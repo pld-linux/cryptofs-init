@@ -7,10 +7,10 @@ License:	GPL
 Group:		Base
 Source0:	ftp://ftp.pld-linux.org/software/cryptofs-init/%{name}-%{version}.tar.gz
 # Source0-md5:	650fa5aeb21e8fa62aa7f7b1d76c7a26
-PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig
 Requires:	losetup >= 2.11g-3
 Requires:	mount
+Requires:	rc-scripts
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,5 +45,5 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc modules.conf cryptofstab.example README
-%verify(not size mtime md5) %config(noreplace) %{_sysconfdir}/cryptofstab
+%verify(not md5 mtime size) %config(noreplace) %{_sysconfdir}/cryptofstab
 %attr(754,root,root) /etc/rc.d/init.d/cryptofs*
