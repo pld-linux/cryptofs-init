@@ -1,5 +1,5 @@
 Summary:	Encrypted filesystems support for rc-scripts
-Summary(pl.UTF-8):   Wsparcie dla szyfrowanych systemów plików do skryptów startowych
+Summary(pl.UTF-8):	Wsparcie dla szyfrowanych systemów plików do skryptów startowych
 Name:		cryptofs-init
 Version:	1.4
 Release:	2
