@@ -1,5 +1,5 @@
 Summary:	Encrypted filesystems support for rc-scripts
-Summary(pl):	Wsparcie dla szyfrowanych system體 plik體 do skrypt體 startowych
+Summary(pl.UTF-8):   Wsparcie dla szyfrowanych system贸w plik贸w do skrypt贸w startowych
 Name:		cryptofs-init
 Version:	1.4
 Release:	2
@@ -18,9 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains a set of scripts to provide easy set up and
 usage of encrypted filesystems and swap space.
 
-%description -l pl
-Ten pakiet zawiera zestaw skrypt體 zapewniaj眂y 砤twe ustawienie i
-u縴tkowanie szyfrowanych system體 plik體 oraz plik體/partycji wymiany
+%description -l pl.UTF-8
+Ten pakiet zawiera zestaw skrypt贸w zapewniaj膮cy 艂atwe ustawienie i
+u偶ytkowanie szyfrowanych system贸w plik贸w oraz plik贸w/partycji wymiany
 
 %prep
 %setup -q
